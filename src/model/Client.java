@@ -1,3 +1,5 @@
+package model;
+
 import java.time.LocalDate;
 
 /**
@@ -55,7 +57,7 @@ class Client extends Person{
 
     @Override
     public String toString(){
-        return "Client: "+this.name +" "+
+        return "model.Client: "+this.name +" "+
                 this.surname +" "+ this.dateOfBirth+this.id;
     }
 

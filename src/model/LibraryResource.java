@@ -1,12 +1,14 @@
+package model;
+
 /**
  * @see Object
  * @author Nikita
  * @since 1.0
  * */
-abstract class LibraryResource{
-    int id;
-    String author;
-    boolean availabilityStatus = true;
+public abstract class LibraryResource{
+    protected int id;
+    protected String author;
+    protected boolean availabilityStatus = true;
 
     @Override
     public String toString(){
@@ -20,9 +22,7 @@ abstract class LibraryResource{
     /**
      * @return  *Читает*
      * */
-    public String read(){
-        return "read yay";
-    }
+    public abstract String read();
 
     /**
      * @return  ID ресурса

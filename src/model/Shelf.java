@@ -1,25 +1,32 @@
+package model;
+
 import java.util.List;
 
 public class Shelf <T extends LibraryResource>{
 
-    List <T> libraryResources;
+    protected List <T> libraryResources;
 
-    Shelf(List<T> books) {
+    public Shelf(List<T> books) {
         this.libraryResources = books;
     }
-    Shelf (){
+    public Shelf (){
 
     }
     /**
-     * @param shelf Список с DVD/Book
+     * @param shelf Список с model.DVD/model.Book
      * */
     public void load (List<T> shelf){
         setLibraryResources(shelf);
     }
+    public void add(T entity){
+        libraryResources.add(entity);
+    };
+
+//    public void add (T e){libraryResources.add(e);}
 
     @Override
     public String toString() {
-        return "Shelf{" +
+        return "model.Shelf{" +
                 "LibraryResources=" + libraryResources.toString() +
                 '}';
     }
@@ -32,7 +39,7 @@ public class Shelf <T extends LibraryResource>{
     }
 
     /**
-     * @param libraryResources Список с DVD/Book
+     * @param libraryResources Список с model.DVD/model.Book
      * */
     public void setLibraryResources(List<T> libraryResources) {
         this.libraryResources = libraryResources;
