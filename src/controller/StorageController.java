@@ -7,28 +7,35 @@ import service.Storage;
 import java.util.List;
 import java.util.Scanner;
 
-public class StorageController {
+public class StorageController implements StorageControllerInterface {
     private final Storage storage;
     public StorageController(Storage storage){
         this.storage = storage;
     }
 
+    @Override
     public List<LibraryResource> searchByName(String author){
     return storage.search(author);
     }
+    @Override
     public List<LibraryResource> searchByStatus(boolean status){
         return storage.search(status);
     }
-    public List<LibraryResource> searchByID(int id){
+    @Override
+    public List<LibraryResource> searchByID(Integer id){
         return storage.search(id);
     }
+    @Override
     public List<LibraryResource> deleteByID(int id){return storage.deleteLibResByID(id);}
+    @Override
     public List<LibraryResource> addDVD(String author, boolean availabilityStatus){
         return storage.addDVD(author, availabilityStatus);}
+    @Override
     public List<LibraryResource> addBook(String author, boolean availabilityStatus){
         return storage.addBook(author, availabilityStatus);}
 
 
+    @Override
     public void dialog(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("search <id/author/avail>\nadd DVD/Book\ndelete");

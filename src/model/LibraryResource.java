@@ -6,9 +6,9 @@ package model;
  * @since 1.0
  * */
 public abstract class LibraryResource{
-    protected int id;
+    protected Integer id;
     protected String author;
-    protected boolean availabilityStatus = true;
+    protected Boolean availabilityStatus = true;
 
     @Override
     public String toString(){
@@ -27,7 +27,7 @@ public abstract class LibraryResource{
     /**
      * @return  ID ресурса
      * */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -41,14 +41,14 @@ public abstract class LibraryResource{
     /**
      * @return  Статус доступности
      * */
-    public boolean isAvailabilityStatus() {
+    public Boolean isAvailabilityStatus() {
         return availabilityStatus;
     }
 
     /**
      * @param id_ ID ресурса
      * */
-    public void setId(int id_) {
+    public void setId(Integer id_) {
         id = id_;
     }
     /**
@@ -61,7 +61,7 @@ public abstract class LibraryResource{
     /**
      * @param availabilityStatus_ Статус доступности
      * */
-    public void setAvailabilityStatus(boolean availabilityStatus_) {
+    public void setAvailabilityStatus(Boolean availabilityStatus_) {
         availabilityStatus = availabilityStatus_;
     }
 }
